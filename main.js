@@ -1,18 +1,19 @@
 // al click del bottone per il menu, fare apparire il menu
 
-const element = document.querySelector('.fa-bars');
+const openMenu = document.querySelector(".header-right > a");
 
-const menuOpen = document.querySelector('.hamburger-menu');
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-const menuClose = document.querySelector('.close');
+const closeMenu = document.querySelector(".close");
 
 // al click del bottone del menu, appare il menu
+// aggiungo la classe active presente nel css alla classe hamburger menu
 
-element.addEventListener('click',
+openMenu.addEventListener('click',
 
   function() {
 
-    menuOpen.style.display = "block";
+    hamburgerMenu.classList.add("active");
 
   }
 
@@ -20,10 +21,11 @@ element.addEventListener('click',
 
 
 // al click del pulsante per chiudere il menu, il menu si chiude
-menuClose.addEventListener('click',
+closeMenu.addEventListener('click',
     
     function() {
-        menuOpen.style.display = "none";
+        hamburgerMenu.classList.remove("active");
+
     }
     
     
